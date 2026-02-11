@@ -74,7 +74,6 @@ in
             cat = "bat";
             ls = "eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first";
             tree = "eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first --tree";
-            atmt = "poetry run atmt";
             gco = "git checkout";
             gst = "git status";
         };
