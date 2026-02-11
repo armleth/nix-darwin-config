@@ -21,6 +21,7 @@
             # change title size
             set -g status-left-length 20
 
+            set -g status-bg colour109
             set-option -a terminal-features 'alacritty:RGB'
         '';
     };
