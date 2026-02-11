@@ -20,7 +20,6 @@
             bat
             eza
             fd
-            neofetch
             ripgrep
 
             # Editor
@@ -31,8 +30,8 @@
             # Dev tools
             nixd
             nixfmt-rfc-style
-            rustup
             lua-language-server
+            rustup
         ];
     };
 
