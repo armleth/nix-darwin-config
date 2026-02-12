@@ -32,6 +32,7 @@
             nixfmt-rfc-style
             lua-language-server
             rustup
+            claude-code
         ];
     };
 

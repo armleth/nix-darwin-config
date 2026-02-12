@@ -68,7 +68,7 @@ in
 
         shellAliases = {
             sudo = "${sudoAlias}";
-            rebuild = "${sudoAlias} darwin-rebuild switch --flake /etc/nix-darwin/";
+            rebuild = "${sudoAlias} darwin-rebuild switch --flake ~/nix-darwin-config";
             vi = "nvim";
             vim = "nvim";
             cat = "bat";
