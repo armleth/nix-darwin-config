@@ -1,8 +1,7 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
     programs.opencode.settings = {
-        "$schema" = "https://opencode.ai/config.json";
         "disabled_providers" = [ "opencode" ];
         "share" = "disabled";
         "permission" = {
