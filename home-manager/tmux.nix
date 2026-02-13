@@ -13,9 +13,10 @@
         mouse = true;
         terminal = "tmux-256color";
         shell = "${pkgs.fish}/bin/fish";
-
         customPaneNavigationAndResize = true;
         keyMode = "vi";
+
+        focusEvents = true;
 
         extraConfig = ''
             # change title size
