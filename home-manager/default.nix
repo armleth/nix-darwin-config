@@ -9,6 +9,7 @@
     imports = [
         ./shell.nix
         ./tmux.nix
+        ./opencode.nix
     ];
 
     home = {
@@ -32,6 +33,8 @@
             nixfmt-rfc-style
             lua-language-server
             rustup
+
+            # AI tools
             claude-code
         ];
     };
@@ -42,6 +45,8 @@
             enableFishIntegration = true;
         };
     };
+
+    xdg.enable = true;
 
     home.stateVersion = "25.11";
 
