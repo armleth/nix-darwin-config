@@ -3,15 +3,26 @@
 {
     programs.opencode = {
         enable = true;
+
         settings = {
-            "disabled_providers" = [ "opencode" ];
-            "share" = "disabled";
-            "permission" = {
-                "edit" = "ask";
-                "webfetch" = "ask";
-                "doom_loop" = "ask";
-                "external_directory" = "ask";
-                "bash" = {
+            disabled_providers = [ "opencode" ];
+            share = "disabled";
+            formatter = {
+                nixfmt = {
+                    command = [
+                        "nixfmt"
+                        "--indent"
+                        "4"
+                        "$FILE"
+                    ];
+                };
+            };
+            permission = {
+                edit = "ask";
+                webfetch = "ask";
+                doom_loop = "ask";
+                external_directory = "ask";
+                bash = {
                     "*" = "ask";
                     "pwd" = "allow";
                     "git status" = "allow";
@@ -26,6 +37,9 @@
                     "tail *" = "allow";
                     "head *" = "allow";
                     "cat *" = "allow";
+                    "find *" = "allow";
+                    "tree *" = "allow";
+                    "sort *" = "allow";
                 };
             };
         };

@@ -2,6 +2,7 @@
     lib,
     config,
     pkgs,
+    datadog-nix,
     ...
 }:
 
@@ -22,6 +23,7 @@
             eza
             fd
             ripgrep
+            sl
 
             # Editor
             dwt1-shell-color-scripts
@@ -36,10 +38,17 @@
 
             # AI tools
             claude-code
+
+            # Datadog
+            datadog-nix.packages.${pkgs.stdenv.hostPlatform.system}.ddtool
         ];
     };
 
     programs = {
+        direnv = {
+            enable = true;
+            nix-direnv.enable = true;
+        };
         fzf = {
             enable = true;
             enableFishIntegration = true;

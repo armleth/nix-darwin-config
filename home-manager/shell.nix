@@ -80,9 +80,12 @@ in
 
         functions = {
             f = {
+                # Use FZF_DEFAULT_COMMAND instead of piping (fd | fzf) so fzf
+                # kills fd on selection, avoiding a stall while fd finishes.
                 body = ''
-                    set -l find_directory fd --type d --hidden ${fSearchExcludeFlags}
-                    cd ($find_directory | fzf --preview='ls --color {}')
+                    set -lx FZF_DEFAULT_COMMAND "fd --type d --hidden ${fSearchExcludeFlags}"
+                    set -l result (fzf --preview='ls --color {}')
+                    and cd $result
                 '';
             };
         };

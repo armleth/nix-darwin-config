@@ -1,5 +1,23 @@
 {
   "nodes": {
+    "datadog-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "treefmt-nix": "treefmt-nix"
+      },
+      "locked": {
+        "lastModified": 1770989015,
+        "narHash": "sha256-HEgI0PFAtEfdMpyXaILDjmmGiLkZqnvjnkPKefXj3NY=",
+        "path": "/Users/armand.thibaudon/Documents/repos/datadog-nix",
+        "type": "path"
+      },
+      "original": {
+        "path": "/Users/armand.thibaudon/Documents/repos/datadog-nix",
+        "type": "path"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -44,6 +62,22 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1735554305,
+        "narHash": "sha256-zExSA1i/b+1NMRhGGLtNfFGXgLtgo+dcuzHzaWA6w3Q=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "0e82ab234249d8eee3e8c91437802b32c74bb3fd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1770517495,
         "narHash": "sha256-YHN8J7BH1Lc9+c6YzTWh08gAwiTWCCj7CqbUaggpVlM=",
         "owner": "NixOS",
@@ -60,9 +94,28 @@
     },
     "root": {
       "inputs": {
+        "datadog-nix": "datadog-nix",
         "home-manager": "home-manager",
         "nix-darwin": "nix-darwin",
+        "nixpkgs": "nixpkgs_2"
+      }
+    },
+    "treefmt-nix": {
+      "inputs": {
         "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1737483750,
+        "narHash": "sha256-5An1wq5U8sNycOBBg3nsDDgpwBmR9liOpDGlhliA6Xo=",
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "rev": "f2cc121df15418d028a59c9737d38e3a90fbaf8f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "treefmt-nix",
+        "type": "github"
       }
     }
   },

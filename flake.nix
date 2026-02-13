@@ -11,11 +11,16 @@
             url = "github:nix-community/home-manager/release-25.11";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        datadog-nix = {
+            url = "path:/Users/armand.thibaudon/Documents/repos/datadog-nix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs =
         inputs@{
             self,
+            datadog-nix,
             home-manager,
             nix-darwin,
             nixpkgs,
@@ -28,6 +33,7 @@
                     {
                         home-manager.useGlobalPkgs = true;
                         home-manager.useUserPackages = true;
+                        home-manager.extraSpecialArgs = { inherit datadog-nix; };
                         home-manager.users."armand.thibaudon" = import ./home-manager;
                     }
                 ];
