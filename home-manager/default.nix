@@ -23,24 +23,41 @@
             eza
             fd
             ripgrep
-            sl
 
             # Editor
             dwt1-shell-color-scripts
             neovim
             tmux
+            vscode
 
             # Dev tools
             nixd
             nixfmt-rfc-style
             lua-language-server
-            rustup
+            gotools
+            black
+            pyright
 
             # AI tools
             claude-code
 
             # Datadog
             datadog-nix.packages.${pkgs.stdenv.hostPlatform.system}.ddtool
+
+            # OPW
+            rustup
+            protobuf
+            go
+
+            # UI tools
+            betterdisplay
+
+            # Docker
+            docker
+            docker-compose
+
+            # Apps
+            spotify
         ];
     };
 
